@@ -40,4 +40,8 @@ SELECT * FROM productos WHERE nombre like 's%';
 
 SELECT * FROM productos WHERE precio > 22000; 
 
-ALTER TABLE productos ADD categoría CHAR(1);    /*agrego una columna a la tabla*/
+ALTER TABLE productos ADD categoria CHAR(10);    /*agrego una columna a la tabla*/
+
+update productos set categoria='silla' where nombre like 'silla%';
+
+update productos set categoria='silla' where left(nombre,5) = 'Silla';
